@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+<html>
+<head>
+  <title>Content Modifier</title>
+  <link rell="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+</head>
+<body>
+
+  <style>
+    /* Custom CSS for adjusting the width of the textarea */
+    #contentDisplay {
+      width: 100%;
+    }
+
+    body{
+      /* background-image: linear-gradient(-90deg, rgb(19, 51, 99), rgb(58, 105, 167)); */
+      background-image: url(images/abstract.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  </style>
+
+  <div class="container mt-1">
+    <div class="row w-100">
+      <div class="col w-100">
+        <div class="card">
+          <div class="card-header bg-primary text-center text-white">
+            Word ,Pdf Files Upload and Display
+          </div>
+          <div class="card-body">
+            <form id="uploadForm" enctype="multipart/form-data">
+              <div class="mb-1">
+                <label for="fileInput" class="form-label">Select Word or PDF File:</label>
+                <input type="file" id="fileInput" class="form-control" accept=".docx, .pdf">
+              </div>
+              <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+            <hr>
+            <div class="mb-1">
+              <label for="fontSizeSlider" class="form-label">Font Size:</label>
+              <input type="range" id="fontSizeSlider" class="form-range" min="36" max="150" step="2" value="16">
+            </div>
+            <div class="mb-1">
+              <label for="bgColorSelect" class="form-label">Background Color:</label>
+              <select id="bgColorSelect" class="form-select">
+                <option value="white">White</option>
+                <option value="lightgray">Light Gray</option>
+                <option value="lightblue">Light Blue</option>
+                <!-- <option value="#210333">Voilet</option> -->
+
+              </select>
+            </div>
+            <div class="mb-1">
+              <label for="fontColorSelect" class="form-label">Font Color:</label>
+              <select id="fontColorSelect" class="form-select">
+                <option value="black">Black</option>
+                <option value="blue">Blue</option>
+                <option value="green">Green</option>
+                <!-- <option value="#210333">Voilet</option> -->
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-2 w-100">
+      <div class="col">
+        <textarea id="contentDisplay" class="form-control w-100" rows="20" style="font-size: 16px;"></textarea>
+      </div>
+  </div>
+
+
+  <div class="container-fluid bg-dark text-white border-top  mt-2" style="border-color: rgba(256, 256, 256, .1) !important;">
+    <div class="row">
+        <div class="col text-center" style="background-color:#0d6efd; border: none;">
+            <p >Copyright &copy; 2023 Group 3 - Subgroup 2. All right reserved</p>
+
+        </div>
+
+    </div>
+</div>
+  
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip-utils/0.1.0/jszip-utils.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/docxtemplater/3.17.2/docxtemplater.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.11.338/pdf.min.js"></script>
+
+  
+
+  <script src="script_old.js"></script>
+</body>
+</html>
+
+
